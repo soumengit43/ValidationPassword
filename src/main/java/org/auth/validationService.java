@@ -25,10 +25,10 @@ public class validationService {
     public static void validateOneCondition(String password) throws InvalidPassException{
             int trueCount = 0;
             // 1. Password char length check
-            if (password.length() < 8)
+            if (password.length() >= 8)
                 trueCount++;
             // 3. Uppercase check using Regex
-            if (!password.matches(".*[A-Z].*"))
+            if (password.matches(".*[A-Z].*"))
                 trueCount++;
             // 5. Number check using Regex
             if (password.matches(".*[0-9].*"))
